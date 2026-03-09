@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BibliotecaApp.Models
 {
-    internal class Usuario
+    public class Usuario
     {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Carnet { get; set; }
+        public string Correo { get; set; }
     }
 }

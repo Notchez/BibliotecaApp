@@ -14,7 +14,7 @@ namespace BibliotecaApp.Models
 
         public string Autor { get; set; }
 
-        public string Anio { get; set; }
+        public int Anio { get; set; }
 
         public bool Disponible { get; set; }
     }
