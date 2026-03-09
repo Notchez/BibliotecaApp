@@ -17,9 +17,22 @@ namespace BibliotecaApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnLibros_Click(object sender, EventArgs e)
         {
+            LibrosForm librosForm = new LibrosForm();
+            librosForm.Show();
+        }
 
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            UsuariosForm usuariosForm = new UsuariosForm();
+            usuariosForm.Show();
+        }
+
+        private void BtnPrestamos_Click(object sender, EventArgs e)
+        {
+            PrestamosForm prestamosForm = new PrestamosForm();
+            prestamosForm.Show();
         }
     }
 }
