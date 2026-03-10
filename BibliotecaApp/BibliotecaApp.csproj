@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\BibliotecaData.cs" />
     <Compile Include="LibrosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,8 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Libro.cs" />
+    <Compile Include="Models\MaterialBiblioteca.cs" />
+    <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Prestamo.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="PrestamosForm.cs">
@@ -75,6 +78,9 @@
     <Compile Include="UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LibrosForm.resx">
+      <DependentUpon>LibrosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,5 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace BibliotecaApp.Models
 {
-    public class Libro
+    public class Libro : MaterialBiblioteca
     {
         public string Autor { get; set; }
 
-        public int Anio { get; set; }
-
-        public bool Disponible { get; set; }
+        public override string MostrarInformacion()
+        {
+            return $"{Id} - {Titulo} - {Autor} - {Anio} - {(Disponible ? "Disponible" : "Prestado")}";
+        }
     }
 }

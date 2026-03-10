@@ -43,7 +43,6 @@
             this.label1.Size = new System.Drawing.Size(257, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sistema de Biblioteca";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLibros
             // 
@@ -76,7 +75,6 @@
             this.BtnPrestamos.TabIndex = 3;
             this.BtnPrestamos.Text = "Gestión de Préstamos";
             this.BtnPrestamos.UseVisualStyleBackColor = true;
-            this.BtnPrestamos.Click += new System.EventHandler(this.tnPrestamos_Click);
             // 
             // MainForm
             // 

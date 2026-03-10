@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BibliotecaApp.Models;
+using BibliotecaApp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,51 @@ namespace BibliotecaApp
         public LibrosForm()
         {
             InitializeComponent();
+        }
+
+        private void LibrosForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Libro nuevoLibro = new Libro();
+
+            nuevoLibro.Id = BibliotecaData.Libros.Count + 1;
+            nuevoLibro.Titulo = txtTitulo.Text;
+            nuevoLibro.Autor = txtAutor.Text;
+            nuevoLibro.Anio = int.Parse(txtAnio.Text);
+            nuevoLibro.Disponible = true;
+
+            BibliotecaData.Libros.Add(nuevoLibro);
+
+            dgvLibros.Rows.Add(
+                nuevoLibro.Id,
+                nuevoLibro.Titulo,
+                nuevoLibro.Autor,
+                nuevoLibro.Anio,
+                nuevoLibro.Disponible
+            );
+
+            txtTitulo.Clear();
+            txtAutor.Clear();
+            txtAnio.Clear();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
