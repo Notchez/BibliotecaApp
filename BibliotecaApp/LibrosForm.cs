@@ -116,5 +116,32 @@ namespace BibliotecaApp
 
             MessageBox.Show("Libro editado correctamente.");
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (filaSeleccionada < 0)
+            {
+                MessageBox.Show("Seleccione un libro para eliminar.");
+                return;
+            }
+
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro de eliminar este libro?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                BibliotecaData.Libros.RemoveAt(filaSeleccionada);
+                dgvLibros.Rows.RemoveAt(filaSeleccionada);
+
+                LimpiarCampos();
+                filaSeleccionada = -1;
+
+                MessageBox.Show("Libro eliminado correctamente.");
+            }
+        }
     }
 }
