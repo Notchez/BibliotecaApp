@@ -29,7 +29,7 @@ namespace BibliotecaApp
             usuariosForm.Show();
         }
 
-        private void BtnPrestamos_Click(object sender, EventArgs e)
+        private void btnPrestamos_Click(object sender, EventArgs e)
         {
             PrestamosForm prestamosForm = new PrestamosForm();
             prestamosForm.Show();
