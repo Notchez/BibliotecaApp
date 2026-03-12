@@ -66,5 +66,55 @@ namespace BibliotecaApp
             txtAutor.Clear();
             txtAnio.Clear();
         }
+
+        private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                filaSeleccionada = e.RowIndex;
+
+                txtTitulo.Text = dgvLibros.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtAutor.Text = dgvLibros.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtAnio.Text = dgvLibros.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (filaSeleccionada < 0)
+            {
+                MessageBox.Show("Seleccione un libro para editar.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTitulo.Text) ||
+                string.IsNullOrWhiteSpace(txtAutor.Text) ||
+                string.IsNullOrWhiteSpace(txtAnio.Text))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.");
+                return;
+            }
+
+            int anio;
+
+            if (!int.TryParse(txtAnio.Text, out anio))
+            {
+                MessageBox.Show("El año debe ser un número válido.");
+                return;
+            }
+
+            BibliotecaData.Libros[filaSeleccionada].Titulo = txtTitulo.Text;
+            BibliotecaData.Libros[filaSeleccionada].Autor = txtAutor.Text;
+            BibliotecaData.Libros[filaSeleccionada].Anio = anio;
+
+            dgvLibros.Rows[filaSeleccionada].Cells[1].Value = txtTitulo.Text;
+            dgvLibros.Rows[filaSeleccionada].Cells[2].Value = txtAutor.Text;
+            dgvLibros.Rows[filaSeleccionada].Cells[3].Value = anio;
+
+            LimpiarCampos();
+            filaSeleccionada = -1;
+
+            MessageBox.Show("Libro editado correctamente.");
+        }
     }
 }

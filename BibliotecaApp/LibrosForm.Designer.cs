@@ -79,7 +79,7 @@
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(183, 42);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(275, 20);
             this.txtTitulo.TabIndex = 3;
@@ -87,7 +87,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(99, 158);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(82, 27);
             this.btnAgregar.TabIndex = 6;
@@ -98,17 +98,18 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(233, 158);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(82, 27);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(374, 158);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(82, 27);
             this.btnEliminar.TabIndex = 8;
@@ -118,7 +119,7 @@
             // txtAutor
             // 
             this.txtAutor.Location = new System.Drawing.Point(183, 76);
-            this.txtAutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAutor.Margin = new System.Windows.Forms.Padding(2);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(275, 20);
             this.txtAutor.TabIndex = 9;
@@ -126,7 +127,7 @@
             // txtAnio
             // 
             this.txtAnio.Location = new System.Drawing.Point(183, 113);
-            this.txtAnio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAnio.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(275, 20);
             this.txtAnio.TabIndex = 10;
@@ -145,13 +146,14 @@
             this.colDisponible});
             this.dgvLibros.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvLibros.Location = new System.Drawing.Point(0, 208);
-            this.dgvLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvLibros.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.ReadOnly = true;
             this.dgvLibros.RowHeadersWidth = 72;
             this.dgvLibros.RowTemplate.Height = 31;
             this.dgvLibros.Size = new System.Drawing.Size(543, 196);
             this.dgvLibros.TabIndex = 11;
+            this.dgvLibros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellClick);
             // 
             // colId
             // 
@@ -203,7 +205,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LibrosForm";
             this.Text = "LibrosForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
