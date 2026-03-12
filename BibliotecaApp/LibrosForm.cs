@@ -14,6 +14,8 @@ namespace BibliotecaApp
 {
     public partial class LibrosForm : Form
     {
+        private int filaSeleccionada = -1;
+
         public LibrosForm()
         {
             InitializeComponent();
@@ -21,12 +23,28 @@ namespace BibliotecaApp
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtTitulo.Text) ||
+                string.IsNullOrWhiteSpace(txtAutor.Text) ||
+                string.IsNullOrWhiteSpace(txtAnio.Text))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.");
+                return;
+            }
+
+            int anio;
+
+            if (!int.TryParse(txtAnio.Text, out anio))
+            {
+                MessageBox.Show("El año debe ser un número válido.");
+                return;
+            }
+
             Libro nuevoLibro = new Libro();
 
             nuevoLibro.Id = BibliotecaData.Libros.Count + 1;
             nuevoLibro.Titulo = txtTitulo.Text;
             nuevoLibro.Autor = txtAutor.Text;
-            nuevoLibro.Anio = int.Parse(txtAnio.Text);
+            nuevoLibro.Anio = anio;
             nuevoLibro.Disponible = true;
 
             BibliotecaData.Libros.Add(nuevoLibro);
@@ -39,6 +57,11 @@ namespace BibliotecaApp
                 nuevoLibro.Disponible
             );
 
+            LimpiarCampos();
+        }
+
+        private void LimpiarCampos()
+        {
             txtTitulo.Clear();
             txtAutor.Clear();
             txtAnio.Clear();
