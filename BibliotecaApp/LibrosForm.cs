@@ -19,11 +19,6 @@ namespace BibliotecaApp
             InitializeComponent();
         }
 
-        private void LibrosForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Libro nuevoLibro = new Libro();
