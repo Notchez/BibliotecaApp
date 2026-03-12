@@ -49,44 +49,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 78);
+            this.label1.Location = new System.Drawing.Point(97, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 25);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Titulo:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 141);
+            this.label2.Location = new System.Drawing.Point(97, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 25);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Autor:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(177, 208);
+            this.label3.Location = new System.Drawing.Point(97, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 25);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Año:";
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(336, 78);
+            this.txtTitulo.Location = new System.Drawing.Point(183, 42);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(500, 29);
+            this.txtTitulo.Size = new System.Drawing.Size(275, 20);
             this.txtTitulo.TabIndex = 3;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(182, 291);
+            this.btnAgregar.Location = new System.Drawing.Point(99, 158);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(150, 50);
+            this.btnAgregar.Size = new System.Drawing.Size(82, 27);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -94,36 +97,39 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(427, 291);
+            this.btnEditar.Location = new System.Drawing.Point(233, 158);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(150, 50);
+            this.btnEditar.Size = new System.Drawing.Size(82, 27);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(686, 291);
+            this.btnEliminar.Location = new System.Drawing.Point(374, 158);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(150, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(82, 27);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // txtAutor
             // 
-            this.txtAutor.Location = new System.Drawing.Point(336, 141);
+            this.txtAutor.Location = new System.Drawing.Point(183, 76);
+            this.txtAutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(500, 29);
+            this.txtAutor.Size = new System.Drawing.Size(275, 20);
             this.txtAutor.TabIndex = 9;
             // 
             // txtAnio
             // 
-            this.txtAnio.Location = new System.Drawing.Point(336, 208);
+            this.txtAnio.Location = new System.Drawing.Point(183, 113);
+            this.txtAnio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAnio.Name = "txtAnio";
-            this.txtAnio.Size = new System.Drawing.Size(500, 29);
+            this.txtAnio.Size = new System.Drawing.Size(275, 20);
             this.txtAnio.TabIndex = 10;
-            this.txtAnio.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // dgvLibros
             // 
@@ -138,12 +144,13 @@
             this.colAnio,
             this.colDisponible});
             this.dgvLibros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvLibros.Location = new System.Drawing.Point(0, 384);
+            this.dgvLibros.Location = new System.Drawing.Point(0, 208);
+            this.dgvLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.ReadOnly = true;
             this.dgvLibros.RowHeadersWidth = 72;
             this.dgvLibros.RowTemplate.Height = 31;
-            this.dgvLibros.Size = new System.Drawing.Size(996, 361);
+            this.dgvLibros.Size = new System.Drawing.Size(543, 196);
             this.dgvLibros.TabIndex = 11;
             // 
             // colId
@@ -183,9 +190,9 @@
             // 
             // LibrosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 745);
+            this.ClientSize = new System.Drawing.Size(543, 404);
             this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.txtAnio);
             this.Controls.Add(this.txtAutor);
@@ -196,9 +203,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LibrosForm";
             this.Text = "LibrosForm";
-            this.Load += new System.EventHandler(this.LibrosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
