@@ -12,6 +12,7 @@ namespace BibliotecaApp
 {
     public partial class UsuariosForm : Form
     {
+        private int filaSeleccionada = -1;
         public UsuariosForm()
         {
             InitializeComponent();
