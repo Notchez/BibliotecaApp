@@ -100,40 +100,6 @@ namespace BibliotecaApp
             BibliotecaData.EstadisticasLibros["Total"] = BibliotecaData.Libros.Count;
         }
 
-        private void ActualizarMatrizPrestamos(Libro libro, Usuario usuario, int valor)
-        {
-            int filaUsuario = usuario.Id - 1;
-            int columnaLibro = libro.Id - 1;
-
-            if (filaUsuario >= 0 && filaUsuario < 10 &&
-                columnaLibro >= 0 && columnaLibro < 10)
-            {
-                BibliotecaData.MatrizPrestamos[filaUsuario, columnaLibro] = valor;
-            }
-        }
-
-        private void ActualizarEstadisticasLibros()
-        {
-            int disponibles = 0;
-            int prestados = 0;
-
-            foreach (Libro libro in BibliotecaData.Libros)
-            {
-                if (libro.Disponible)
-                {
-                    disponibles++;
-                }
-                else
-                {
-                    prestados++;
-                }
-            }
-
-            BibliotecaData.EstadisticasLibros["Disponibles"] = disponibles;
-            BibliotecaData.EstadisticasLibros["Prestados"] = prestados;
-            BibliotecaData.EstadisticasLibros["Total"] = BibliotecaData.Libros.Count;
-        }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (!ValidarPrestamo())
