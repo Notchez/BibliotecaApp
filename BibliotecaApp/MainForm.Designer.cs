@@ -38,58 +38,54 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(513, 131);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(280, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(449, 57);
+            this.label1.Size = new System.Drawing.Size(257, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sistema de Biblioteca";
             // 
             // btnLibros
             // 
             this.btnLibros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibros.Location = new System.Drawing.Point(557, 294);
-            this.btnLibros.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLibros.Location = new System.Drawing.Point(304, 159);
             this.btnLibros.Name = "btnLibros";
-            this.btnLibros.Size = new System.Drawing.Size(367, 74);
+            this.btnLibros.Size = new System.Drawing.Size(200, 40);
             this.btnLibros.TabIndex = 1;
-            this.btnLibros.Text = "Gestión de Libros";
+            this.btnLibros.Text = "Gestion de Libros";
             this.btnLibros.UseVisualStyleBackColor = true;
             this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
             // 
             // btnUsuarios
             // 
             this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(557, 438);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUsuarios.Location = new System.Drawing.Point(304, 237);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(367, 74);
+            this.btnUsuarios.Size = new System.Drawing.Size(200, 40);
             this.btnUsuarios.TabIndex = 2;
-            this.btnUsuarios.Text = "Gestión de Usuarios";
+            this.btnUsuarios.Text = "Gestion de Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnPrestamos
             // 
             this.btnPrestamos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrestamos.Location = new System.Drawing.Point(557, 574);
-            this.btnPrestamos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnPrestamos.Location = new System.Drawing.Point(304, 311);
             this.btnPrestamos.Name = "btnPrestamos";
-            this.btnPrestamos.Size = new System.Drawing.Size(367, 74);
+            this.btnPrestamos.Size = new System.Drawing.Size(200, 40);
             this.btnPrestamos.TabIndex = 3;
-            this.btnPrestamos.Text = "Gestión de Préstamos";
+            this.btnPrestamos.Text = "Gestion de Prestamos";
             this.btnPrestamos.UseVisualStyleBackColor = true;
+            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 831);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnPrestamos);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnLibros);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Biblioteca";
