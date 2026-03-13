@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System;
+
 namespace BibliotecaApp.Models
 {
-    public class Usuario
+    public class Usuario : Persona
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
         public string Carnet { get; set; }
-        public string Correo { get; set; }
+
+        public override string MostrarInformacion()
+        {
+            return $"{Id} - {Nombre} - {Carnet} - {Correo}";
+        }
     }
 }
