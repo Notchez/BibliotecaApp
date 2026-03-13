@@ -66,14 +66,14 @@
             // 
             // dtpFechaPrestamo
             // 
-            this.dtpFechaPrestamo.Location = new System.Drawing.Point(232, 214);
+            this.dtpFechaPrestamo.Location = new System.Drawing.Point(232, 178);
             this.dtpFechaPrestamo.Name = "dtpFechaPrestamo";
             this.dtpFechaPrestamo.Size = new System.Drawing.Size(410, 20);
             this.dtpFechaPrestamo.TabIndex = 2;
             // 
             // dtpFechaDevolucion
             // 
-            this.dtpFechaDevolucion.Location = new System.Drawing.Point(232, 178);
+            this.dtpFechaDevolucion.Location = new System.Drawing.Point(232, 214);
             this.dtpFechaDevolucion.Name = "dtpFechaDevolucion";
             this.dtpFechaDevolucion.Size = new System.Drawing.Size(410, 20);
             this.dtpFechaDevolucion.TabIndex = 3;
@@ -98,6 +98,7 @@
             this.btnDevolver.TabIndex = 5;
             this.btnDevolver.Text = "Devolver";
             this.btnDevolver.UseVisualStyleBackColor = true;
+            this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
             // 
             // dgvPrestamos
             // 

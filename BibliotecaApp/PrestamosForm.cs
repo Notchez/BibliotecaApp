@@ -49,11 +49,95 @@ namespace BibliotecaApp
             cmbUsuarios.DisplayMember = "Nombre";
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private bool ValidarPrestamo()
         {
             if (cmbLibros.SelectedItem == null || cmbUsuarios.SelectedItem == null)
             {
                 MessageBox.Show("Debe seleccionar un libro y un usuario.");
+                return false;
+            }
+
+            if (dtpFechaDevolucion.Value.Date < dtpFechaPrestamo.Value.Date)
+            {
+                MessageBox.Show("La fecha de devolución no puede ser antes que la fecha de préstamo.");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void ActualizarMatrizPrestamos(Libro libro, Usuario usuario, int valor)
+        {
+            int filaUsuario = usuario.Id - 1;
+            int columnaLibro = libro.Id - 1;
+
+            if (filaUsuario >= 0 && filaUsuario < 10 &&
+                columnaLibro >= 0 && columnaLibro < 10)
+            {
+                BibliotecaData.MatrizPrestamos[filaUsuario, columnaLibro] = valor;
+            }
+        }
+
+        private void ActualizarEstadisticasLibros()
+        {
+            int disponibles = 0;
+            int prestados = 0;
+
+            foreach (Libro libro in BibliotecaData.Libros)
+            {
+                if (libro.Disponible)
+                {
+                    disponibles++;
+                }
+                else
+                {
+                    prestados++;
+                }
+            }
+
+            BibliotecaData.EstadisticasLibros["Disponibles"] = disponibles;
+            BibliotecaData.EstadisticasLibros["Prestados"] = prestados;
+            BibliotecaData.EstadisticasLibros["Total"] = BibliotecaData.Libros.Count;
+        }
+
+        private void ActualizarMatrizPrestamos(Libro libro, Usuario usuario, int valor)
+        {
+            int filaUsuario = usuario.Id - 1;
+            int columnaLibro = libro.Id - 1;
+
+            if (filaUsuario >= 0 && filaUsuario < 10 &&
+                columnaLibro >= 0 && columnaLibro < 10)
+            {
+                BibliotecaData.MatrizPrestamos[filaUsuario, columnaLibro] = valor;
+            }
+        }
+
+        private void ActualizarEstadisticasLibros()
+        {
+            int disponibles = 0;
+            int prestados = 0;
+
+            foreach (Libro libro in BibliotecaData.Libros)
+            {
+                if (libro.Disponible)
+                {
+                    disponibles++;
+                }
+                else
+                {
+                    prestados++;
+                }
+            }
+
+            BibliotecaData.EstadisticasLibros["Disponibles"] = disponibles;
+            BibliotecaData.EstadisticasLibros["Prestados"] = prestados;
+            BibliotecaData.EstadisticasLibros["Total"] = BibliotecaData.Libros.Count;
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarPrestamo())
+            {
                 return;
             }
 
@@ -71,6 +155,8 @@ namespace BibliotecaApp
             BibliotecaData.Prestamos.Add(nuevoPrestamo);
 
             libroSeleccionado.Prestar();
+            ActualizarMatrizPrestamos(libroSeleccionado, usuarioSeleccionado, 1);
+            ActualizarEstadisticasLibros();
 
             dgvPrestamos.Rows.Add(
                 nuevoPrestamo.Id,
@@ -91,6 +177,30 @@ namespace BibliotecaApp
             {
                 filaSeleccionada = e.RowIndex;
             }
+        }
+
+        private void btnDevolver_Click(object sender, EventArgs e)
+        {
+            if (filaSeleccionada < 0)
+            {
+                MessageBox.Show("Seleccione un préstamo para devolver.");
+                return;
+            }
+
+            Prestamo prestamoSeleccionado = BibliotecaData.Prestamos[filaSeleccionada];
+
+            prestamoSeleccionado.LibroPrestado.Devolver();
+            ActualizarMatrizPrestamos(prestamoSeleccionado.LibroPrestado, prestamoSeleccionado.UsuarioPrestamo, 0);
+            ActualizarEstadisticasLibros();
+
+            BibliotecaData.Prestamos.RemoveAt(filaSeleccionada);
+            dgvPrestamos.Rows.RemoveAt(filaSeleccionada);
+
+            filaSeleccionada = -1;
+
+            CargarLibros();
+
+            MessageBox.Show("Libro devuelto correctamente.");
         }
     }
 }
