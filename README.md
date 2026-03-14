@@ -1,6 +1,10 @@
 # BibliotecaApp
 
-Sistema de gestión de biblioteca desarrollado en **C# con Windows Forms** para el desafío 1 de la materia **Desarrollo de Aplicaciones con Software Propietario (DAS)**.
+Sistema de gestión de biblioteca desarrollado en **C# Windows Forms**.
+
+## Demo del sistema
+
+![Sistema Biblioteca](sistema_biblioteca.png)
 
 ## Funcionalidades
 
