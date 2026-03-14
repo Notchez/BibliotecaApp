@@ -34,5 +34,11 @@ namespace BibliotecaApp
             PrestamosForm prestamosForm = new PrestamosForm();
             prestamosForm.Show();
         }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            EstadisticasForm estadisticasForm = new EstadisticasForm();
+            estadisticasForm.Show();
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.btnLibros = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnPrestamos = new System.Windows.Forms.Button();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +48,7 @@
             // btnLibros
             // 
             this.btnLibros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibros.Location = new System.Drawing.Point(304, 159);
+            this.btnLibros.Location = new System.Drawing.Point(304, 135);
             this.btnLibros.Name = "btnLibros";
             this.btnLibros.Size = new System.Drawing.Size(200, 40);
             this.btnLibros.TabIndex = 1;
@@ -58,7 +59,7 @@
             // btnUsuarios
             // 
             this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(304, 237);
+            this.btnUsuarios.Location = new System.Drawing.Point(304, 207);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(200, 40);
             this.btnUsuarios.TabIndex = 2;
@@ -69,7 +70,7 @@
             // btnPrestamos
             // 
             this.btnPrestamos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrestamos.Location = new System.Drawing.Point(304, 311);
+            this.btnPrestamos.Location = new System.Drawing.Point(304, 280);
             this.btnPrestamos.Name = "btnPrestamos";
             this.btnPrestamos.Size = new System.Drawing.Size(200, 40);
             this.btnPrestamos.TabIndex = 3;
@@ -77,11 +78,23 @@
             this.btnPrestamos.UseVisualStyleBackColor = true;
             this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
+            // btnEstadisticas
+            // 
+            this.btnEstadisticas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstadisticas.Location = new System.Drawing.Point(304, 351);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(200, 40);
+            this.btnEstadisticas.TabIndex = 4;
+            this.btnEstadisticas.Text = "Estadisticas";
+            this.btnEstadisticas.UseVisualStyleBackColor = true;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEstadisticas);
             this.Controls.Add(this.btnPrestamos);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnLibros);
@@ -100,6 +113,7 @@
         private System.Windows.Forms.Button btnLibros;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnPrestamos;
+        private System.Windows.Forms.Button btnEstadisticas;
     }
 }
 
