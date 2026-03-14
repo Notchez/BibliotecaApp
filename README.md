@@ -2,10 +2,6 @@
 
 Sistema de gestión de biblioteca desarrollado en **C# Windows Forms**.
 
-## Demo del sistema
-
-![Sistema Biblioteca](sistema_biblioteca.png)
-
 ## Funcionalidades
 
 El sistema permite gestionar los elementos principales de una biblioteca:
